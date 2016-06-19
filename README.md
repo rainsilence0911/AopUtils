@@ -13,6 +13,11 @@ Animal animal = AopUtils.attach(Animal.class, cat, ()->{
 	return list;
 });
 
+// 执行CatAdviser中 type=BEFORE的方法
+// 执行LoggerAdviser type=BEFORE的方法
+// 执行animal.eat
+// 执行LoggerAdviser type=AFTER的方法
+// 执行CatAdviser中 type=AFTER的方法
 animal.eat("apple");
 
 ```
@@ -32,3 +37,6 @@ AopUtils.attach(Class<T> targetInterface, Object targetInstance, AdviserFactory 
 AopUtils.attach(Class<T> targetInterface, Object targetInstance, List<?> adviserList)
 
 ```
+
+### How to define a adviser?
+AopUtils工具包只支持用Annotation来描述切面.
