@@ -98,7 +98,7 @@ public class LoggerAdviser {
 			/**
 			 * void method()
 			 */
-			NO_ARGUMENTS,
+			NONE,
 			
 			/**
 			 * void method(Object[] args)
