@@ -3,16 +3,6 @@ AopUtils是由Java动态代理实现的轻量级Aop工具包。对第三方库�
 
 ## Use case
 
-### Interface
-
-```
-@param targetInterface 代理对象的接口，会作为返回类型
-@param targetInstance 代理对象实例
-@param adviserFactory 切面拦截器（函数式接口）
-AopUtils.attach(Class<T> targetInterface, Object targetInstance, AdviserFactory adviserFactory)
-```
-
-例：
 ```
 Cat cat = new Cat();
 Animal animal = AopUtils.attach(Animal.class, cat, ()->{
@@ -27,9 +17,18 @@ animal.eat("apple");
 
 ```
 
+### Interface
+
 ```
+@param targetInterface 代理对象的接口，会作为返回类型
+@param targetInstance 代理对象实例
+@param adviserFactory 切面拦截器（函数式接口）
+AopUtils.attach(Class<T> targetInterface, Object targetInstance, AdviserFactory adviserFactory)
+
+
 @param targetInterface 代理对象的接口，会作为返回类型
 @param targetInstance 代理对象实例
 @param adviserFactory 切面拦截器列表
 AopUtils.attach(Class<T> targetInterface, Object targetInstance, List<?> adviserList)
+
 ```
