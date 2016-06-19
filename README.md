@@ -90,9 +90,63 @@ public class LoggerAdviser {
 		         AFTER：会在目标方法执行后倒序执行
 		         EXCEPTION：会在目标方法发生Exception后顺序执行
 		3.param：这个参数用来描述切面方法的param个数以及类型，AopUtils支持十种切面接口
+```
+		package org.aop.base.annotation;
 
-		表头  | 表头
-		————- | ————-
-		单元格内容  | 单元格内容
-		单元格内容l  | 单元格内容
+		public enum ParamType {
+
+			/**
+			 * void method()
+			 */
+			NO_ARGUMENTS,
+			
+			/**
+			 * void method(Object[] args)
+			 */
+			ARGUMENTS,
+			
+			/**
+			 * void method(Object[] args, Object returnValue)
+			 */
+			ARGUMENTS_RETURN_VALUE,
+			
+			/**
+			 * void method(Object target)
+			 */
+			TARGET,
+			
+			/**
+			 * void method(Object target, Object[] args)
+			 */
+			TARGET_ARGUMENTS,
+			
+			/**
+			 * void method(Object target, Object returnValue)
+			 */
+			TARGET_RETURN_VALUE,
+			
+			/**
+			 * void method(Object target, Object[] args, Object returnValue)
+			 */
+			TARGET_ARGUMENTS_RETURN_VALUE,
+			
+			/**
+			 * void method(Object target, Exception e)
+			 */
+			TARGET_EXCEPTION,
+			
+			/**
+			 * void method(Object[] args, Exception e)
+			 */
+			ARGUMENTS_EXCEPTION,
+			
+			/**
+			 * void method(Object target, Object[] args, Exception e)
+			 */
+			TARGET_ARGUMENTS_EXCEPTION
+			
+		}
+
+```
+
 
