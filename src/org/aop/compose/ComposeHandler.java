@@ -18,14 +18,14 @@ class ComposeHandler {
 	private Object adviser;
 	
 	private static final ParamType[] BEFORE_PARAM_SUPPORT = new ParamType[] {
-		ParamType.NO_ARGUMENTS,
+		ParamType.NONE,
 		ParamType.ARGUMENTS,
 		ParamType.TARGET,
 		ParamType.TARGET_ARGUMENTS
 	};
 	
 	private static final ParamType[] AFTER_PARAM_SUPPORT = new ParamType[] {
-		ParamType.NO_ARGUMENTS,
+		ParamType.NONE,
 		ParamType.ARGUMENTS, 
 		ParamType.TARGET,
 		ParamType.TARGET_ARGUMENTS,
@@ -181,7 +181,7 @@ class ComposeHandler {
 			
 			ParamType type = holder.getParamType();
 			
-			if (type == ParamType.NO_ARGUMENTS) {
+			if (type == ParamType.NONE) {
 				m.invoke(adviser);
 			} else if (type == ParamType.ARGUMENTS) {
 				m.invoke(adviser, new Object[] { args });

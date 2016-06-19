@@ -5,7 +5,7 @@ public enum ParamType {
 	/**
 	 * void method()
 	 */
-	NO_ARGUMENTS,
+	NONE,
 	
 	/**
 	 * void method(Object[] args)

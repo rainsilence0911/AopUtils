@@ -25,7 +25,7 @@ public class ComposeValidator {
 		int paramCount = method.getParameterCount();
 		Class[] types = method.getParameterTypes();
 		
-		if (argumentType == ParamType.NO_ARGUMENTS) {
+		if (argumentType == ParamType.NONE) {
 			if (paramCount == 0) {
 				return true;
 			}

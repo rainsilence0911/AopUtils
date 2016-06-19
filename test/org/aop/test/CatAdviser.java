@@ -8,7 +8,7 @@ import org.aop.base.annotation.ParamType;
 
 public class CatAdviser {
 
-	@Adviser(methodName="eat", type=AdviseType.BEFORE, param=ParamType.NO_ARGUMENTS)
+	@Adviser(methodName="eat", type=AdviseType.BEFORE, param=ParamType.NONE)
 	public void processBefore() {
 		System.out.println("before1");
 	}
@@ -28,7 +28,7 @@ public class CatAdviser {
 		System.out.println("before4---" + target.getClassName() + " args=" + args[0]);
 	}
 	
-	@Adviser(methodName="eat", type=AdviseType.AFTER, param=ParamType.NO_ARGUMENTS)
+	@Adviser(methodName="eat", type=AdviseType.AFTER, param=ParamType.NONE)
 	public void processAfter() {
 		System.out.println("after1");
 	}
