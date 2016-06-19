@@ -1,5 +1,5 @@
 # Introduction
-AopUtils是由Java动态代理实现的轻量级Aop工具包。对第三方库完全没有依赖
+AopUtils是由Java动态代理实现的轻量级Aop工具包。实现了Before,After,Exception的轻量级方法拦截器。接口上全面拥抱函数式编程，对原有代码零侵入性，且对第三方库完全没有依赖
 
 
 ## 包的依赖关系
